@@ -61,3 +61,12 @@ To learn more about using signatures in other ways, click the link to the docume
 ```
 gpg --output message.sig --detach-sign encrypted_message.gpg
 ```
+
+## Importing & Exporting Keys
+[Read The Docs]()
+
+When you create a key pair via the GPG command line utility it is stored on your systems keyring by default. You can use them from here in whatever way you need. If you want to export the keys and use them on other systems however, you will need to know how to import and export keys to files.
+
+
+### Exporting Public
+
