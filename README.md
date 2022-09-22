@@ -1,10 +1,9 @@
 # gpg-cheat-sheet
 It's a GPG cheat sheet, I don't know what else to say.
 
-GnuPG is a tool for secure communication. This chapter is a quick-start guide that covers the core functionality of GnuPG. This includes keypair creation, exchanging and verifying keys, encrypting and decrypting documents, and authenticating documents with digital signatures. It does not explain in detail the concepts behind public-key cryptography, encryption, and digital signatures. 
+GnuPG is a tool for secure communication. This guide is a summary of the documentation for the GPG command line utility. Click the links in each section at any time to read more about the subject on the official documentation.
 
 # Using The GPG Command Line Utility
-Click the links along this page that reference the official GPG documentation. 
 
 # Listing Keys
 To view public keys
@@ -67,6 +66,8 @@ Decryption can only be done via the private key. It's a good practice to verify 
 ```
 gpg --output decrypted_msg.txt -r <alias_or_fingerprint_slice> --decrypt msg.gpg
 ```
+
+If an output location is not specified the decrypted content will be printed to STDOUT.
 
 ## Making & Verifying Signatures
 [Read The Docs](https://www.gnupg.org/gph/en/manual/x135.html)
@@ -132,5 +133,8 @@ gpg --edit-key <key>
 Then if you haven't already you can check the fingerprint at the prompt by entering `fpr`. Once you have verified the fingerprint you can trust the key by entering `sign` and proceeding. Once you have signed it you can check your signatures for the key with `check`.
 
 
+# Helpful Bullets
+* When referring to a key you can use the name of the owner, email of the owner, or a slice of the fingerprint. It's typically best to use the last 8 characters when using the fingerprint.
+* If you are using GPG on a Unix based system, run `man gpg` at the command line to see a set of instructions on your system at any time. Alterntatively, you can run `gpg --help`.
 
 
