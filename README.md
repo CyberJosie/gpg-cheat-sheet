@@ -11,7 +11,9 @@ Click the links along this page that reference the official GPG documentation.
 
 To generate a key pair with the GPG command line utility use this command:
 ```
+gpg --full-gen-key
 ```
+
 You will be asked questions about the key including:
 * Encryption Algorythms
 * Key Size (1024 - 4096)
@@ -19,6 +21,8 @@ You will be asked questions about the key including:
 * Real name (Just something that identifies you, like a username)
 * Email address (Recommended)
 * Comment (Optional)
+
+When you are finished, enter 'O' to generate and password protect your key.
 
 ## Generating A Revocation Certificate
 [Read The Docs](https://www.gnupg.org/gph/en/manual/c14.html)
