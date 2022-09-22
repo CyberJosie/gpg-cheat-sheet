@@ -6,6 +6,25 @@ GnuPG is a tool for secure communication. This chapter is a quick-start guide th
 # Using The GPG Command Line Utility
 Click the links along this page that reference the official GPG documentation. 
 
+# Listing Keys
+To view public keys
+```
+gpg -k
+```
+OR
+```
+gpg --list-keys
+```
+
+To view private keys
+```
+gpg -K
+```
+OR
+```
+gpg --list-secret-keys
+```
+
 ## Generating Key Pairs
 [Read The Docs](https://www.gnupg.org/gph/en/manual/c14.html)
 
@@ -33,6 +52,8 @@ To Generate a revocation certificate:
 ```
 gpg --output revocation.crt --gen-revoke <alias_email_or_fingerprint>
 ```
+
+It's best to store the recovation certificate and any private keys offline on your own storage medium. If you store it in the cloud, it is not fully yours.
 
 ## Encrypting & Decrypting Messages
 [Read The Docs](https://www.gnupg.org/gph/en/manual/x110.html)
