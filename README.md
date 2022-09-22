@@ -108,6 +108,8 @@ To manually trust a key use the `--edit-key` switch.
 gpg --edit-key <key>
 ```
 
+Then if you haven't already you can check the fingerprint at the prompt by entering `fpr`. Once you have verified the fingerprint you can trust the key by entering `sign` and proceeding. Once you have signed it you can check your signatures for the key with `check`.
+
 
 
 
