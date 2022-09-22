@@ -46,3 +46,16 @@ Decryption can only be done via the private key. It's a good practice to verify 
 ```
 gpg --output decrypted_msg.txt -r <alias_or_fingerprint_slice> --decrypt msg.gpg
 ```
+
+## Making & Verifying Signatures
+[Read The Docs](https://www.gnupg.org/gph/en/manual/x135.html)
+
+Signatures are used to cryptographically verify that the content was indeed encrypted by the owner and has not been tampered with since its origin. This is important when downloading applications and reading encryption messages. The person who encrypted the data will have also provided a signature if they have some sense. To verify a detached signature (which is better used for messages and communication):
+```
+gpg --decrypt message.sig
+```
+
+To learan more about using signatures in other ways, click the link to the documentation above. For most applications that use GPG to verify their origin, you will need to import a public key before you are able to verify the signature. To create a detached signature, use the command below:
+```
+gpg --output message.sig --detach-sign encrypted_message.gpg
+```
