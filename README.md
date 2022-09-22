@@ -30,4 +30,15 @@ To Generate a revocation certificate:
 gpg --output revocation.crt --gen-revoke <alias_email_or_fingerprint>
 ```
 
-## 
+## Encrypting & Decrypting Messages
+[Read The Docs](https://www.gnupg.org/gph/en/manual/x110.html)
+
+Encryption is done via the public key and can only be decrypted by the corresponding private key.
+```
+gpg --output encrypted_message.gpg -r <alias_email_or_fingerprint> --encrypt <message_or_file>
+```
+
+Decryption can only be done via the private key. It's a good practice to verify signatures along with decryption, but we'll cover that later.
+```
+
+```
