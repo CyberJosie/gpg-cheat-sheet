@@ -40,5 +40,5 @@ gpg --output encrypted_message.gpg -r <alias_email_or_fingerprint> --encrypt <me
 
 Decryption can only be done via the private key. It's a good practice to verify signatures along with decryption, but we'll cover that later.
 ```
-
+gpg --output decrypted_msg.txt -r <alias_or_fingerprint_slice> --decrypt msg.gpg
 ```
