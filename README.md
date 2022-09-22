@@ -19,3 +19,15 @@ You will be asked questions about the key including:
 * Real name (Just something that identifies you, like a username)
 * Email address (Recommended)
 * Comment (Optional)
+
+## Generating A Revocation Certificate
+[Read The Docs](https://www.gnupg.org/gph/en/manual/c14.html)
+
+Revocation certificates are used to revoke usage of your key if it is lost or compromised. It is important to generate this certificate each time you create a new key BEFORE you need it and store it in a safe place.
+
+To Generate a revocation certificate:
+```
+gpg --output revocation.crt --gen-revoke <alias_email_or_fingerprint>
+```
+
+## 
