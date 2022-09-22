@@ -63,7 +63,7 @@ gpg --output message.sig --detach-sign encrypted_message.gpg
 ```
 
 ## Importing & Exporting Keys
-[Read The Docs]()
+[Read The Docs](https://www.gnupg.org/gph/en/manual/x56.html)
 
 When you create a key pair via the GPG command line utility it is stored on your systems keyring by default. You can use them from here in whatever way you need. If you want to export the keys and use them on other systems however, you will need to know how to import and export keys to files.
 
@@ -89,3 +89,25 @@ gpg --export-secret-keys --armor <key>
 ```
 
 ### Importing Keys
+
+To import a public key:
+```
+gpg --import pub.key
+```
+
+You do not always need to manually trust a key however some keys require it. Fingerprints are human readable strings that cryptogaphically verify the owner.
+
+### Fingerprint
+You cen get the fingerprint of a key with:
+```
+gpg --fingerprint <key>
+```
+
+To manually trust a key use the `--edit-key` switch.
+```
+gpg --edit-key <key>
+```
+
+
+
+
