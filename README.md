@@ -1,4 +1,4 @@
-# gpg-cheat-sheet
+# GPG Cheat Sheet
 It's a GPG cheat sheet, I don't know what else to say.
 
 GnuPG is a tool for secure communication. This guide is a summary of the documentation for the GPG command line utility. Click the links in each section at any time to read more about the subject on the official documentation.
