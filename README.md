@@ -68,5 +68,24 @@ gpg --output message.sig --detach-sign encrypted_message.gpg
 When you create a key pair via the GPG command line utility it is stored on your systems keyring by default. You can use them from here in whatever way you need. If you want to export the keys and use them on other systems however, you will need to know how to import and export keys to files.
 
 
-### Exporting Public
+### Exporting Keys
 
+To export a public key as bytes
+```
+gpg --export <key>
+```
+To export a public key as GPG block
+```
+gpg --export --armor <key>
+```
+
+To export a private key as bytes
+```
+gpg --export-secret-keys <key>
+```
+To export a public key as GPG block
+```
+gpg --export-secret-keys --armor <key>
+```
+
+### Importing Keys
