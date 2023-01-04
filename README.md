@@ -70,6 +70,8 @@ gpg --output decrypted_msg.txt -r <alias_or_fingerprint_slice> --decrypt msg.gpg
 If an output location is not specified the decrypted content will be printed to STDOUT.
 
 ## Making & Verifying Signatures
+
+## This talks about detached signatures, there are multiple types. Proceed with caution.
 [Read The Docs](https://www.gnupg.org/gph/en/manual/x135.html)
 
 Signatures are used to cryptographically verify that the content was encrypted by the owner and has not been tampered with since its origin. This is important when downloading applications and reading encryption messages. The person who encrypted the data will have also provided a signature if they have some sense. To verify a detached signature (which is better used for messages and communication):
